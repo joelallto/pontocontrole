@@ -1,0 +1,24 @@
+# Banco de dados local (contém horários reais — não deve ir pro repositório)
+ponto.db
+*.db
+
+# Pasta de importação (comprovantes reais — não deve ir pro repositório)
+PONTO/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+env/
+
+# Streamlit
+.streamlit/secrets.toml
+
+# Sistema
+.DS_Store
+Thumbs.db
+
+# Editores / IDEs
+.vscode/
+.idea/

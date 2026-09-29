@@ -1,0 +1,15 @@
+# Dependências de SISTEMA (apt-get), lidas automaticamente pelo Streamlit
+# Community Cloud durante o deploy — não confundir com requirements.txt
+# (que é só de pacotes Python).
+#
+# O RapidOCR (usado para ler comprovantes escaneados/print) depende do
+# OpenCV por baixo dos panos. O OpenCV, por sua vez, espera bibliotecas
+# gráficas do sistema que uma imagem Linux "server" (como a do Streamlit
+# Cloud) não tem instaladas por padrão. Sem isso, o deploy sobe mas o app
+# quebra ao tentar importar rapidocr/cv2 com um erro parecido com:
+#   ImportError: libGL.so.1: cannot open shared object file
+libgl1
+libglib2.0-0
+libsm6
+libxext6
+libxrender1

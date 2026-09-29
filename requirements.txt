@@ -1,0 +1,19 @@
+# Dependências Python do app (app.py) e do watcher (watcher.py).
+# Instalação local:      pip install -r requirements.txt
+# Streamlit Community Cloud: lido automaticamente no deploy.
+#
+# Importante: o RapidOCR (OCR) hoje só tem "wheels" prontas para Python
+# 3.11 e 3.12. No deploy, escolha uma dessas duas versões em
+# "Advanced settings" -> "Python version" (veja o README.md) — a versão
+# padrão mais nova do Streamlit Cloud pode não ter pacote pronto ainda e
+# derrubar o build tentando compilar do zero.
+
+streamlit
+pandas
+
+# Leitura de comprovantes (PDF/imagem) e OCR
+pdfplumber            # texto embutido em PDF (rápido, sem OCR)
+pymupdf               # converte página de PDF em imagem para o OCR
+rapidocr-onnxruntime  # OCR (precisa do packages.txt para as libs do sistema)
+pillow
+numpy
